@@ -4,15 +4,18 @@
       "salaryAmount": "30",
       "salaryComponent": "basic salary"
     },
+
     {
       "currencyId": "ALL",
       "salaryAmount": "50",
       "salaryComponent": "basic salary"
     },
+
     {
       "currencyId": "ALL",
       "salaryAmount": "90",
       "salaryComponent": "basic salary"
     }
   ]
+  
   

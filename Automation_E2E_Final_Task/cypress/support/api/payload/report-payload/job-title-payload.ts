@@ -4,5 +4,6 @@ export interface JobTitlePayload {
     specification?: null;
     title: string;
     
+    
   }
   

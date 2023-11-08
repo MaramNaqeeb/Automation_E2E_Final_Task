@@ -14,5 +14,8 @@ export interface JobTitleResponse {
     meta: [];
     rels: [];
     
+
   }
+
+  
   

@@ -28,4 +28,6 @@ export interface SalaryResponse {
     empNumber: number;
   };
   rels: [];
+
 }
+

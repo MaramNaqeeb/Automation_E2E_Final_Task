@@ -35,4 +35,6 @@ export interface EditJobResponse {
   };
   meta: [];
   rels: [];
+
 }
+

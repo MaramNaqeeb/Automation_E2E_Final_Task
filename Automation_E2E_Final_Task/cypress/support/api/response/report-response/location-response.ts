@@ -18,4 +18,6 @@ export interface LocationResponse {
   };
   meta: [];
   rels: [];
+
 }
+

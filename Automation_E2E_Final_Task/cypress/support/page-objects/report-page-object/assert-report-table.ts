@@ -1,7 +1,10 @@
+
 import { header, rowContent } from "../../../e2e/specs-folder/add-report.spec.cy";
 import { reportName } from "./create-report";
 
+
 class AssertReportTable {
+
   elements = {
     reportName: () => cy.get(".orangehrm-card-container > .oxd-text"),
     rows: () => cy.get(".rgRow"),
@@ -9,10 +12,12 @@ class AssertReportTable {
     secondHeader: () => cy.get(".header-rgRow.actual-rgRow"),
   };
 
+
   assertReportName() {
     this.elements.reportName().should("contain", reportName);
   }
   
+
   assertRowsNumber() {
     this.elements.rows().then((rows) => {
       const rowsNumber = Cypress.$(rows).length;
@@ -20,6 +25,7 @@ class AssertReportTable {
       expect(rows).to.have.length(rowsNumber);
     });
   }
+
 
   assertHeader() {
   
@@ -30,13 +36,16 @@ class AssertReportTable {
         cy.wrap(e)
           .find(".rgHeaderCell")
           .eq(i)
+
           .invoke("text")
           .then((cell) => {
             expect(cell).eq(header[i].value);
           });
+
       });
     }
   }
+
 
   asserRowValues() {
     this.elements.rows().invoke("index");
@@ -44,14 +53,18 @@ class AssertReportTable {
       this.elements
         .rows()
         .eq(i)
+        
         .each((elm) => {
           cy.wrap(elm)
             .invoke("text")
             .then((cell) => {
               expect(cell).eq(rowContent[i]);
             });
+
         });
     }
   }
 }
+
 export default AssertReportTable;
+

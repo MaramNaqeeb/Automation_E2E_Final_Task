@@ -1,9 +1,11 @@
-import { EmployeePayload } from "../../../API/payload/report-payload/employee-payload";
+
+import { EmployeePayload } from "../../../api/payload/report-payload/employee-payload";
 import { jobTitleID, locationId } from "./api-helpers";
-import { LocationPayload } from "../../../API/payload/report-payload/location-payload";
-import { JobTitlePayload } from "../../../API/payload/report-payload/job-title-payload";
-import { EditJobPayload } from "../../../API/payload/report-payload/edit-job-payload";
-import { SalaryPayload } from "../../../API/payload/report-payload/salary-payload";
+import { LocationPayload } from "../../../api/payload/report-payload/location-payload";
+import { JobTitlePayload } from "../../../api/payload/report-payload/job-title-payload";
+import { EditJobPayload } from "../../../api/payload/report-payload/edit-job-payload";
+import { SalaryPayload } from "../../../api/payload/report-payload/salary-payload";
+
 
 export function newEmployeeData(e?: EmployeePayload) {
   let employee: any = {
@@ -15,7 +17,9 @@ export function newEmployeeData(e?: EmployeePayload) {
   };
   return employee;
 }
+
 export function newLocationData(l?: LocationPayload) {
+
   let location: any = {
     address: "" || l?.address,
     city: l?.city,
@@ -27,8 +31,10 @@ export function newLocationData(l?: LocationPayload) {
     province: "" || l?.province,
     zipCode: "" || l?.zipCode,
   };
+
   return location;
 }
+
 
 export function newjobTitleData(j?: JobTitlePayload) {
   let job: any = {
@@ -38,7 +44,9 @@ export function newjobTitleData(j?: JobTitlePayload) {
     title: j?.title,
   };
   return job;
+
 }
+
 export const editJobData = (e?: EditJobPayload): any => {
   let editJob: any = {
     jobTitleId: jobTitleID || e?.jobTitleId,
@@ -48,6 +56,7 @@ export const editJobData = (e?: EditJobPayload): any => {
   return editJob;
 };
 
+
 export function salaryData(s?: SalaryPayload) {
   let salary: any = {
     addDirectDeposit: false || s?.addDirectDeposit,
@@ -56,8 +65,10 @@ export function salaryData(s?: SalaryPayload) {
     salaryAmount: s?.salaryAmount,
     salaryComponent: s?.salaryComponent,
   };
+
   return salary;
 }
+
 
 export const deleteJobData = (): any => {
   let deleteJob: any = {
@@ -66,6 +77,7 @@ export const deleteJobData = (): any => {
   return deleteJob;
 };
 
+
 export const deleteLocationData = (): any => {
   let deleteLocation: any = {
     ids: [locationId],
@@ -73,9 +85,11 @@ export const deleteLocationData = (): any => {
   return deleteLocation;
 };
 
+
 export function deleteEmployeeData(payload: any): any {
   let deleteEmployee1: any = {
     ids: [payload],
   };
   return deleteEmployee1;
 }
+

@@ -4,4 +4,6 @@ export interface SalaryPayload {
   currencyId: string;
   salaryAmount: string;
   salaryComponent: string;
+  
 }
+

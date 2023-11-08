@@ -8,4 +8,6 @@ export interface LocationPayload {
   phone?: string;
   province?: string;
   zipCode?: string;
+  
 }
+
