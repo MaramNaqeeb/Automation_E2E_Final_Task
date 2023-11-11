@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Nov 11 08:13:26 IST 2023","Sat Nov 11 08:13:39 IST 2023","12834","OrangeHRM-Generate new claim","","","","","reject employee claim",""
+"passed","Sat Nov 11 08:13:14 IST 2023","Sat Nov 11 08:13:26 IST 2023","12749","","OrangeHRM-Generate new claim","","","","approve employee claim",""
+"passed","Sat Nov 11 08:13:14 IST 2023","Sat Nov 11 08:13:26 IST 2023","12906","OrangeHRM-Generate new claim","","","","","approve employee claim",""
+"passed","Sat Nov 11 08:13:26 IST 2023","Sat Nov 11 08:13:38 IST 2023","11628","","OrangeHRM-Generate new claim","","","","reject employee claim",""

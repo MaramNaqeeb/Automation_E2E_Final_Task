@@ -28,7 +28,7 @@ class AssertReportTable {
 
 
   assertHeader() {
-  
+  cy.wait(2000)
     for (let i = 0; i < header.length; i++) {
       this.elements.firstHeader().contains(header[i].key).invoke("index");
 
