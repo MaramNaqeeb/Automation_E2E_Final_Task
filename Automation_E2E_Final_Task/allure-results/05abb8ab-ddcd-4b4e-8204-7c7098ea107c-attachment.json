@@ -1,0 +1,1 @@
+{"method":"DELETE","url":"https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/claim/expenses/types","body":{"ids":[149]},"failOnStatusCode":false}

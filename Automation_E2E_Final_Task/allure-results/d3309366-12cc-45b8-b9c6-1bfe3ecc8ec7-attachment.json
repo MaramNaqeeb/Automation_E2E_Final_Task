@@ -1,0 +1,3 @@
+PUT
+https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/claim/requests/146/action
+{"action":"SUBMIT"}

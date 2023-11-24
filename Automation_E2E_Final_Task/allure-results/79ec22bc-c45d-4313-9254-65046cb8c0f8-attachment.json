@@ -1,0 +1,1 @@
+{"method":"POST","url":"https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/claim/expenses/types","body":{"description":"","name":"newExpense96","status":true},"failOnStatusCode":false}

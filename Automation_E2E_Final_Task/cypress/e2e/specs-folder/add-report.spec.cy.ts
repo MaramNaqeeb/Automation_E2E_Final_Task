@@ -33,7 +33,6 @@ describe("OrangeHRM-Generate new employee report", () => {
   before('prerequisites' ,() =>{
     cy.fixture("admin-fixtures/admin.json").as("adminLogin");
     cy.get("@adminLogin").then((admin: any) => {
-      cy.visit("/");
 
       LOGIN_OBJ.loginFunction(admin.userName, admin.password);
     });
