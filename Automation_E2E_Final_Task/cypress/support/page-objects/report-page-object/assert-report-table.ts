@@ -1,10 +1,6 @@
-
-import { header, rowContent } from "../../../e2e/specs-folder/add-report.spec.cy";
 import { reportName } from "./create-report";
 
-
 class AssertReportTable {
-
   elements = {
     reportName: () => cy.get(".orangehrm-card-container > .oxd-text"),
     rows: () => cy.get(".rgRow"),
@@ -12,11 +8,9 @@ class AssertReportTable {
     secondHeader: () => cy.get(".header-rgRow.actual-rgRow"),
   };
 
-
   assertReportName() {
     this.elements.reportName().should("contain", reportName);
   }
-  
 
   assertRowsNumber() {
     this.elements.rows().then((rows) => {
@@ -26,45 +20,33 @@ class AssertReportTable {
     });
   }
 
-
-  assertHeader() {
-  
-    for (let i = 0; i < header.length; i++) {
-      this.elements.firstHeader().contains(header[i].key).invoke("index");
-
-      this.elements.secondHeader().each((e) => {
-        cy.wrap(e)
-          .find(".rgHeaderCell")
-          .eq(i)
-
-          .invoke("text")
-          .then((cell) => {
-            expect(cell).eq(header[i].value);
-          });
-
+  assertHeader(header: any) {
+    this.elements.firstHeader().contains(".rgHeaderCell", header.key).invoke("index").then((headerIndex)=>{
+    this.elements
+      .secondHeader()
+      .find(".rgHeaderCell")
+      .eq(headerIndex)
+      .invoke("text")
+      .then((cell) => {
+        expect(cell).eq(header.value);
       });
-    }
+    })
+
   }
 
+  asserRowValues(row: any, rowIndex:any) {
+    cy.get(".header-rgRow").contains(".rgHeaderCell",row.key).invoke("index").then((headerIndex)=>{
+    cy.get(".inner-content-table")
+      .find(".rgRow").eq(rowIndex)
+      .find(".rgCell")
+      .eq(headerIndex)
+      .invoke("text")
+      .then((cell) => {
+        expect(cell).eq(row.value);
+      });
+    })
 
-  asserRowValues() {
-    this.elements.rows().invoke("index");
-    for (let i = 0; i < rowContent.length; i++) {
-      this.elements
-        .rows()
-        .eq(i)
-        
-        .each((elm) => {
-          cy.wrap(elm)
-            .invoke("text")
-            .then((cell) => {
-              expect(cell).eq(rowContent[i]);
-            });
-
-        });
-    }
   }
 }
 
 export default AssertReportTable;
-
