@@ -131,17 +131,17 @@ describe("OrangeHRM-Generate new employee report", () => {
     let row1: any = [
       { key: "Employee First Name", value: firstEmployee.firstName },
       { key: "Job Title", value: jobName },
-      { key: "Amount", value: `${salary[0]["salaryAmount"]}--` }, // I use '--' at the end of each object to match it with the value invoked from the system
+      { key: "Amount", value: `${salary[0]["salaryAmount"]}--` }, // I use '--' at the end of the object to match it with the value invoked from the system
     ];
     let row2: any = [
       { key: "Employee First Name", value: secondEmployee.firstName },
       { key: "Job Title", value: jobName },
-      { key: "Amount", value: `${salary[1]["salaryAmount"]}--` }, // I use '--' at the end of each object to match it with the value invoked from the system
+      { key: "Amount", value: `${salary[1]["salaryAmount"]}--` }, // I use '--' at the end of the object to match it with the value invoked from the system
     ];
     let row3: any = [
       { key: "Employee First Name", value: thirdEmployee.firstName },
       { key: "Job Title", value: jobName },
-      { key: "Amount", value: `${salary[2]["salaryAmount"]}--` }, // I use '--' at the end of each object to match it with the value invoked from the system
+      { key: "Amount", value: `${salary[2]["salaryAmount"]}--` }, // I use '--' at the end of the object to match it with the value invoked from the system
     ];
     header = [
       { key: "Personal", value: "Employee First Name" },
