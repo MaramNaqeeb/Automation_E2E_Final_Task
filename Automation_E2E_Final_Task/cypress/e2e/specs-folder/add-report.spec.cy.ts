@@ -126,6 +126,7 @@ describe("OrangeHRM-Generate new employee report", () => {
     });
   });
 
+  
   it("TCs1: OrangeHRM-Assert report table", () => {
   
     let row1: any = [
