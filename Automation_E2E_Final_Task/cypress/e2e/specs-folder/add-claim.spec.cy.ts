@@ -1,6 +1,6 @@
 import Login from "../../support/page-objects/login-page-object/login";
 import LogOut from "../../support/page-objects/logout-page-object/logout";
-import GenericFunctions from "../../support/helpers/helpers-functions/generic-functions";
+import GenericFunctions from "../../support/helpers/helpers-functions/common-helper-functions/generic-functions";
 
 import ApiHelpers, {
   empId,
@@ -11,7 +11,7 @@ import {
   expenseId,
   eventId,
 } from "../../support/helpers/helpers-functions/claim-helpers/claim-api-helpers";
-import CommonFixtureHelper from "../../support/helpers/common-fixture-helper";
+import CommonFixtureHelper from "../../support/helpers/helpers-functions/common-helper-functions/common-fixture-helper";
 
 
 const LOGIN_OBJ: Login = new Login();
@@ -105,7 +105,7 @@ describe("OrangeHRM-Generate new claim", () => {
         claimEventId: eventId,
         currencyId: event.currencyId,
       };
-
+        
       ApiHelpers_OBJ.submitEvent(submitEventObject).then(() => {
          submitExpenseObject = {
           amount: `${GenericFunctions.randomNumber()}.00`,
@@ -124,8 +124,8 @@ describe("OrangeHRM-Generate new claim", () => {
   after("Delete the event, expense, and employee", () => {
     ApiHelpers_OBJ.deleteEvent();
     ApiHelpers_OBJ.deleteExpense();
-    ApiHelpers_OBJ.deleteEmployee();
     ApiHelpers_OBJ.deleteUser();
+    ApiHelpers_OBJ.deleteEmployee();
   });
 
   it("approve employee claim", () => {
@@ -133,6 +133,7 @@ describe("OrangeHRM-Generate new claim", () => {
     cy.visit(`/web/index.php/claim/assignClaim/id/${submitEventId}`);
     ASSERT_OBJ.approveClaim();
     status = "Paid";
+    date= `${GenericFunctions.testCurrentDate()}`;
     let claimValues:any = [
       { key: "Submitted Date", value: date },
       { key: "Status", value: status },
@@ -150,6 +151,7 @@ describe("OrangeHRM-Generate new claim", () => {
     cy.visit(`/web/index.php/claim/assignClaim/id/${submitEventId}`);
     ASSERT_OBJ.rejectClaim();
     status = "Rejected";
+    date= `${GenericFunctions.testCurrentDate()}`;
     let claimValues:any = [
       { key: "Submitted Date", value: date },
       { key: "Status", value: status },
