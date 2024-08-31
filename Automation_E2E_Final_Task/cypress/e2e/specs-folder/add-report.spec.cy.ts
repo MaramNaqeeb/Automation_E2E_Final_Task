@@ -25,7 +25,7 @@ let thirdEmployee: any;
 let salary: any;
 let employeeIds: any;
 
-describe("OrangeHRM-Generate new employee report", () => {
+describe("OrangeHRM-Generate new employee report", () => {   //change the name
   before("prerequisites", () => {
     CommonFixtureHelper.loadDataFromFixture(
       "admin-fixtures/admin.json",
@@ -117,7 +117,7 @@ describe("OrangeHRM-Generate new employee report", () => {
     REPORT_OBJ.createReport();
   });
 
-  afterEach("Delete data created", () => {
+  afterEach("Delete data created", () => {  //it should be after
     ApiHelpers_OBJ.deleteJob();
     ApiHelpers_OBJ.deleteLocation();
     employeeIds = [`${empId}`, `${empId - 1}`, `${empId - 2}`]; // I use empId -1 and empId-2  to be able to delete the previous employees
@@ -158,7 +158,7 @@ describe("OrangeHRM-Generate new employee report", () => {
     ASSERT_REPORT_OBJ.assertHeader(header[0]);
     ASSERT_REPORT_OBJ.assertHeader(header[1]);
     ASSERT_REPORT_OBJ.assertHeader(header[2]);
-
+    
     ASSERT_REPORT_OBJ.asserRowValues(row1[0], 0);
     ASSERT_REPORT_OBJ.asserRowValues(row1[1], 0);
     ASSERT_REPORT_OBJ.asserRowValues(row1[2], 0);
