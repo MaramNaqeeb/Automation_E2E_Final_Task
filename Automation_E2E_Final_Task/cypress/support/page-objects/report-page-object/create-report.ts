@@ -1,7 +1,7 @@
 
 import { locationName } from "../../../e2e/specs-folder/add-report.spec.cy";
 import { jobName } from "../../../e2e/specs-folder/add-report.spec.cy";
-import GenericFunctions from "../../helpers/helpers-functions/generic-functions/generic-functions";
+import GenericFunctions from "../../helpers/helpers-functions/common-helper-functions/generic-functions";
 
 
 export let reportName: string; //I export the reportName from here to use it in the asser-report-table.ts to assert the report's name
@@ -13,7 +13,7 @@ class CreateReport {
     reportTitle: () => cy.getByCy("Type here ..."),
     selectionIcon: () => cy.get(".orangehrm-report-criteria"),
     selectSpecificCriteriaIcon: () =>
-      cy.get('[data-v-c93bdbf3=""][data-v-20f3e4a9=""]'),
+      cy.get('[data-v-c93bdbf3=""][data-v-74d5baa9=""]'),
     SpecificCriteriaOption: () => cy.get(".oxd-select-option"),
     selectionWrapper: () => cy.get(".oxd-select-wrapper"),
 
@@ -37,7 +37,7 @@ class CreateReport {
   }
 
   firstSelectionCriteriaName(criteriaName: string) {
-    this.elements.selectSpecificCriteriaIcon().click();
+    this.elements.selectSpecificCriteriaIcon().click({ multiple: true });
     this.elements.SpecificCriteriaOption().contains(criteriaName).click();
   }
 
