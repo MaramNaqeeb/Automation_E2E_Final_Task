@@ -14,7 +14,7 @@ class AssertReportTable {
 
   assertRowsNumber() {
     this.elements.rows().then((rows) => {
-      const rowsNumber = Cypress.$(rows).length;
+      const rowsNumber = Cypress.$(rows).length;   // to get the length from the rows
 
       expect(rows).to.have.length(rowsNumber);
     });

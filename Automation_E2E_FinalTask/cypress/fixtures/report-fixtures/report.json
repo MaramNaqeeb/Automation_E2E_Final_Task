@@ -1,0 +1,14 @@
+
+{
+    "reportName":"TestReport",
+    "jobCriteria":"Job Title",
+    "locationCriteria":"Location",
+    "personalGroupField":"Personal",
+    "employeeFirstName":"Employee First Name",
+    "jobGroupField":"Job",
+    "jobTitleField":"Job Title",
+    "salaryGroupField":"Salary",
+    "salaryAmount":"Amount"
+
+
+}

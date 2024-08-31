@@ -1,0 +1,1 @@
+{"method":"POST","url":"https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/pim/employees/204/salary-components","body":{"currencyId":"ALL","salaryAmount":"30","salaryComponent":"basic salary"},"failOnStatusCode":false}

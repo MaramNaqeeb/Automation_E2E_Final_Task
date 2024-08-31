@@ -1,0 +1,1 @@
+{"method":"POST","url":"https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users","body":{"empNumber":192,"password":"123qwe,./","status":true,"userRoleId":2,"username":"Markw784"},"failOnStatusCode":false}

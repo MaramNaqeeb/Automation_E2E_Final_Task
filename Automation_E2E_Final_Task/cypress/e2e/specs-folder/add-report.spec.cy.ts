@@ -25,8 +25,6 @@ let thirdEmployee: any;
 let salary: any;
 let employeeIds: any;
 
-
-
 describe("OrangeHRM-Generate new employee report", () => {   //change the name
   before("prerequisites", () => {
     CommonFixtureHelper.loadDataFromFixture(

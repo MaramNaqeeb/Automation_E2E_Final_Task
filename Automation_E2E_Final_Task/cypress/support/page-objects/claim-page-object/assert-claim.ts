@@ -18,17 +18,17 @@ loadData(){
 
   rejectClaim() {
     this.loadData()
-    this.elements.rejectClaimButton().should("exist");
-    this.elements.rejectClaimButton().click();
+    this.elements.rejectClaimButton().should("exist");         
+    this.elements.rejectClaimButton().click();           
   }
 
   assertClaimValues(obj:any) {
     cy.visit(
       `https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewAssignClaim`
     );
-    this.elements.tableHeader().should("exist");
+    this.elements.tableHeader().should("exist");       
       this.elements
-        .tableHeader()
+        .tableHeader()       
         .contains(obj.key)
         .invoke("index")
         .then((headerIndex) => {

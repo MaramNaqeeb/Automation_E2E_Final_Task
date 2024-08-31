@@ -1,0 +1,1 @@
+{"method":"DELETE","url":"https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/locations","body":{"ids":[25]},"failOnStatusCode":false}

@@ -1,0 +1,1 @@
+{"method":"PUT","url":"https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/pim/employees/231/job-details","body":{"jobTitleId":41,"joinedDate":null,"locationId":20},"failOnStatusCode":false}
