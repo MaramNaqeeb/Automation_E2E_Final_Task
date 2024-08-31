@@ -1,3 +1,0 @@
-PUT
-https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/pim/employees/207/job-details
-{"jobTitleId":33,"joinedDate":null,"locationId":10}

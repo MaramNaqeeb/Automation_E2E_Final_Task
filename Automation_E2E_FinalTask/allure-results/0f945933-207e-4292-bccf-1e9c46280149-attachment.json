@@ -1,3 +1,0 @@
-POST
-https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/claim/requests/11/expenses
-{"amount":"132.00","date":"2024-8-31","expenseTypeId":7,"note":null}

@@ -1,1 +1,0 @@
-{"method":"POST","url":"https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/claim/requests/10/expenses","body":{"amount":"436.00","date":"2024-8-31","expenseTypeId":6,"note":null},"failOnStatusCode":false}

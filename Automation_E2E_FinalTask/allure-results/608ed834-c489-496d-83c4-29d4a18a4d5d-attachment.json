@@ -1,3 +1,0 @@
-POST
-https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/claim/expenses/types
-{"name":"newExpense109","status":true}

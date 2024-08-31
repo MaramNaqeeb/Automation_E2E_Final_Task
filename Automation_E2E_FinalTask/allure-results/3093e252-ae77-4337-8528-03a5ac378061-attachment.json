@@ -1,1 +1,0 @@
-{"method":"POST","url":"https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/locations","body":{"city":"Amman","countryCode":"JO","name":"Center Street561"},"failOnStatusCode":false}

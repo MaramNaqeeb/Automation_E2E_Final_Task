@@ -1,3 +1,0 @@
-POST
-https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users
-{"empNumber":175,"password":"123qwe,./","status":true,"userRoleId":2,"username":"Markw621"}

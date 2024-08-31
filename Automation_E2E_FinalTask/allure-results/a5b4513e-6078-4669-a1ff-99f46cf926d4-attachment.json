@@ -1,3 +1,0 @@
-POST
-https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/pim/employees
-{"employeeId":"0337","firstName":"Jan Test","lastName":"JTest"}
